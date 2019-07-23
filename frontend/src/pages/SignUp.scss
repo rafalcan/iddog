@@ -1,0 +1,23 @@
+@import '../styles/colors';
+
+.signup {
+  text-align: left;
+
+  .content {
+    background-color: $white;
+    border-radius: 15px;
+    margin: 25px 0;
+    min-height: 300px;
+    padding: 90px 20px 20px;
+    position: relative;
+
+    .error {
+      color: $danger;
+      left: 0;
+      position: absolute;
+      text-align: center;
+      top: 20px;
+      width: 100%;
+    }
+  }
+}

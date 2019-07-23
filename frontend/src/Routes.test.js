@@ -4,11 +4,24 @@ import { mount } from 'enzyme';
 import SignUp from "pages/SignUp";
 import NotFound from "pages/NotFound";
 import Routes from './Routes';
+import { AuthProvider } from 'providers/Auth';
+
+it('should renders without crashing', () => {
+  mount(
+    <AuthProvider>
+      <MemoryRouter>
+        <Routes />
+      </MemoryRouter>
+    </AuthProvider>
+  );
+});
 
 it('should show Home component for / router', () => {
   const component = mount(
     <MemoryRouter initialEntries={['/']}>
-      <Routes />
+      <AuthProvider>
+        <Routes />
+      </AuthProvider>
     </MemoryRouter>
   );
 
@@ -18,7 +31,9 @@ it('should show Home component for / router', () => {
 it('should show Not Found component for route not defined', () => {
   const component = mount(
     <MemoryRouter initialEntries={['/unknown']}>
-      <Routes />
+      <AuthProvider>
+        <Routes />
+      </AuthProvider>
     </MemoryRouter>
   );
 
