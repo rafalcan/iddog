@@ -1,7 +1,7 @@
 @import '../styles/colors';
 
-.signup {
-  text-align: left;
+.notfound {
+  text-align: center;
 
   .content {
     background-color: $white;
@@ -10,14 +10,5 @@
     min-height: 300px;
     padding: 100px 20px 20px;
     position: relative;
-
-    .error {
-      color: $danger;
-      left: 0;
-      position: absolute;
-      text-align: center;
-      top: 20px;
-      width: 100%;
-    }
   }
 }
