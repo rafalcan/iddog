@@ -45,7 +45,7 @@ const Routes = () => (
   <div className="routes">
     <AuthConsumer>
       {({ isAuthenticated }) => (
-        isAuthenticated() ? <Menu /> : null
+        isAuthenticated() && <Menu />
       )}
     </AuthConsumer>
     <Switch>
