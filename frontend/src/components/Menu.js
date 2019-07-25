@@ -23,7 +23,7 @@ class Menu extends Component {
               <Link className="nav-link" to={{ pathname: "/feed", search: "?category=pug" }}>Pug</Link>
             </NavItem>
             <NavItem>
-              <Button className="link" color="link"
+              <Button color="link"
                 onClick={() => {
                   logout();
                   this.props.history.push('/');

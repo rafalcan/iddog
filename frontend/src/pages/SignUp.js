@@ -19,9 +19,13 @@ class SignUp extends Component {
         emailState: '',
       }
     }
+
+    this.validateEmail = this.validateEmail.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  validateEmail = (e) => {
+  validateEmail(e) {
     const emailReg = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     const { validate } = this.state;
 
@@ -34,7 +38,7 @@ class SignUp extends Component {
     this.setState({ validate });
   }
 
-  handleChange = async (e) => {
+  async handleChange(e) {
     const name = e.target.name;
     const value = e.target.value;
 
@@ -43,7 +47,7 @@ class SignUp extends Component {
     });
   }
 
-  handleSubmit = async (e, login) => {
+  async handleSubmit (e, login) {
     e.preventDefault();
     const { email } = this.state;
 

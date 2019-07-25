@@ -1,0 +1,51 @@
+@import '../styles/colors';
+
+.picture {
+  text-align: center;
+
+  &.-modal {
+    left: 50%;
+    height: 100%;
+    max-width: 100%;
+    padding: 20px;
+    position: fixed;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    z-index: 10;
+
+    .content {
+      height: 100%;
+    }
+
+    .image {
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .content {
+    background-color: $white;
+    border-radius: 15px;
+    min-height: 300px;
+    padding: 20px;
+    position: relative;
+  }
+
+  .image {
+    max-width: 300px;
+    max-height: 600px;
+
+    @media (min-width: 768) {
+      max-width: auto;
+    }
+  }
+
+  .btn-close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+}
