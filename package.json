@@ -1,0 +1,28 @@
+{
+  "name": "idwdog",
+  "version": "1.0.0",
+  "description": "Challenge to create a frontend in react using API IDWDog.",
+  "author": "rafalcan - Rafael Gomes Alcantara",
+  "license": "MIT",
+  "engines": {
+    "node": "11.x",
+    "npm": "6.x"
+  },
+  "scripts": {
+    "install:all": "npm install && cd frontend/ && npm install",
+    "start": "node --optimize_for_size --max_old_space_size=920 --gc_interval=100 backend",
+    "build": "cd frontend/ && npm install && npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "cacheDirectories": [
+    "node_modules",
+    "frontend/node_modules"
+  ],
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "keywords": [
+    "node",
+    "heroku"
+  ]
+}

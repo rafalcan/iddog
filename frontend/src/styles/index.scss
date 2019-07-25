@@ -1,0 +1,11 @@
+/*
+ * Global
+ */
+
+$theme-colors: (
+  'primary': #50f
+);
+
+@import '~bootstrap/scss/bootstrap';
+@import 'colors';
+@import 'base';
