@@ -12,7 +12,6 @@
     "install:all": "npm install && cd frontend/ && npm install",
     "start": "node --optimize_for_size --max_old_space_size=920 --gc_interval=100 backend",
     "build": "cd frontend/ && npm install && npm run build",
-    "deploy": "git push heroku master",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "cacheDirectories": [

@@ -21,10 +21,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 Enter in the frontend folder, install necessary dependencies and build the project.
 We use this to Heroku build the react in the server.
 
-### `npm run deploy`
-
-Push the branch with the build to Heroku branch.
-
 ## Learn More
 
 You can learn more in the [Express](https://expressjs.com/).

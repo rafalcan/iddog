@@ -23,11 +23,11 @@ if (!isDev && cluster.isMaster) {
   const app = express();
 
   // Priority serve any static files.
-  app.use(express.static(path.resolve(__dirname, '../frontend/dist')));
+  app.use(express.static(path.resolve(__dirname, '../frontend/build')));
 
   // All remaining requests return to the app in case we have a routing.
   app.get('*', (request, response) => {
-    response.sendFile(path.resolve(__dirname, '../frontend/dist', 'index.html'));
+    response.sendFile(path.resolve(__dirname, '../frontend/build', 'index.html'));
   });
 
   app.listen(PORT, () => {
